@@ -6,7 +6,7 @@ function ExperienceCard({ heading, content, image }) {
       <div className="experience_image_section h-32">
         <img src={image} className="w-full h-full object-cover" alt="" />
       </div>
-      <div className="experience_description h-full  bg-blue-800 text-gray-50  px-3 py-3">
+      <div className="experience_description h-full  bg-slate-800 text-gray-50  px-3 py-3">
         <h2 className="text-lg font-bold">{heading}</h2>
         <p className="text-sm mt-2 leading-5">{content}</p>
       </div>

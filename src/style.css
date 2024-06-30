@@ -639,10 +639,6 @@ video {
   margin-bottom: 1rem;
 }
 
-.ml-8 {
-  margin-left: 2rem;
-}
-
 .mr-8 {
   margin-right: 2rem;
 }
@@ -661,6 +657,14 @@ video {
 
 .mt-24 {
   margin-top: 6rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .box-content {
@@ -812,27 +816,13 @@ video {
   border-width: 1px;
 }
 
-.border-2 {
-  border-width: 2px;
-}
-
 .border-none {
   border-style: none;
-}
-
-.border-blue-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
 
 .border-slate-900 {
   --tw-border-opacity: 1;
   border-color: rgb(15 23 42 / var(--tw-border-opacity));
-}
-
-.border-slate-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(148 163 184 / var(--tw-border-opacity));
 }
 
 .bg-blue-500 {
@@ -843,6 +833,11 @@ video {
 .bg-blue-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+}
+
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -922,6 +917,21 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -959,13 +969,13 @@ video {
   line-height: 2.25rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 
@@ -986,10 +996,6 @@ video {
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-extralight {
-  font-weight: 200;
 }
 
 .font-light {
@@ -1153,13 +1159,6 @@ canvas {
   min-height: 100vh;
 }
 
-/* .header {
-  display: flex;
-  padding: 10px 20px 10px 20px;
-  border: 1px solid red;
-  justify-content: space-between;
-} */
-
 .header  ul {
   list-style: none;
   padding: 0;
@@ -1195,13 +1194,14 @@ canvas {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 300px;
+  width: 310px;
+  height: 537px;
 }
 
-.swiper-slide img {
+.swiper-slide div {
   display: block;
   width: 100%;
+  height: 537px;
 }
 
 .swiper_main_container{
@@ -1210,7 +1210,7 @@ canvas {
 
 .react-player{
   width: 100%;
-  height: 100%;
+  min-height: 537px;
   -o-object-fit: cover;
      object-fit: cover;
 }
