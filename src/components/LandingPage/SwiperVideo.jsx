@@ -24,14 +24,15 @@ export default function App() {
     setActiveIndex(swiper.activeIndex);
   };
   const indexes = [
-    { index: 0, url: sample_video_2 },
-    { index: 1, url: sample_video_3 },
-    { index: 2, url: sample_video_1 },
-    { index: 3, url: sample_video_3 },
-    { index: 4, url: sample_video_1 },
-    { index: 5, url: sample_video_2 },
-    { index: 6, url: sample_video_1 },
-    { index: 7, url: sample_video_3 },
+    { index: 0, url: "https://cdn.shopify.com/videos/c/o/v/ff9893a9e10a4d2f9fd08d68f08435aa.mp4" },
+    { index: 1, url: "https://cdn.shopify.com/videos/c/o/v/37a45bdc3f4340f59d1ee04f04dd20ca.mp4" },
+    { index: 2, url: "https://cdn.shopify.com/videos/c/o/v/c541005a34ad44f8bfe385d2099a9cc2.mp4" },
+    { index: 3, url: "https://cdn.shopify.com/videos/c/o/v/b4f5e0dd6e784fe9bbc2574eaaef6be6.mp4" },
+    { index: 4, url: "https://cdn.shopify.com/videos/c/o/v/3bf3b3b7d2b64670bcdba59ed6286e4c.mp4" },
+    { index: 5, url: "https://cdn.shopify.com/videos/c/o/v/da8fe135be79439c81f16ca54c70edde.mp4" },
+    { index: 6, url: "https://cdn.shopify.com/videos/c/o/v/17bd689ecc9842deaaa174ee1c613783.mp4" },
+    { index: 7, url: "https://cdn.shopify.com/videos/c/o/v/027cf56ebf384bcebff6873f28be8916.mp4" },
+    { index: 8, url: "https://cdn.shopify.com/videos/c/o/v/37a45bdc3f4340f59d1ee04f04dd20ca.mp4" },
   ];
   const middleVideo = Math.floor(indexes.length / 2);
 
@@ -59,43 +60,45 @@ export default function App() {
         slidesPerView={"auto"}
         initialSlide={middleVideo}
         coverflowEffect={{
-          rotate: 10,
+          rotate: 0,
           stretch: 1,
-          depth: 200,
-          modifier: 1,
+          depth: 100,
+          modifier: 6,
           slideShadows: true,
         }}
         pagination={{
           clickable: true,
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper swiper_main_container"
         navigation={true}
         onActiveIndexChange={(swiper) => {
           console.log(swiper);
           setActiveIndex(swiper.activeIndex);
         }}
+        
       >
         {indexes.map((item, index) => (
-          <SwiperSlide className="min-h-96" id={index}>
-            <div className="rounded-lg h-full bg-white overflow-clip object-contain">
+          <SwiperSlide id={index} style={{minHeight : "380px"}}>
+            <div className="rounded-2xl overflow-hidden h-full bg-white border-2 border-slate-400 object-contain">
               <ReactPlayer
                 className="react-player fixed-bottom h-full"
                 url={item.url}
                 width="100%"
+                heigh="100%"
                 controls={activeIndex == item.index}
                 playing={activeIndex == item.index}
-                style={{ objectFit: "contain", height: "100%" }}
+                style={{ objectFit: "contain", borderRadius: "10px" }}
                 loop={true}
-                config={{
-                  file: {
-                    attributes: {
-                      style: {
-                        objectFit: "cover", // Ensure the video fits within the player without stretching
-                      },
-                    },
-                  },
-                }}
+                // config={{
+                //   file: {
+                //     attributes: {
+                //       style: {
+                //         objectFit: "contain", 
+                //       },
+                //     },
+                //   },
+                // }}
               />
             </div>
           </SwiperSlide>
