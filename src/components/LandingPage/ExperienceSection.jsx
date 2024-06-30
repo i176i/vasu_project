@@ -21,22 +21,16 @@ function ExperienceSection() {
         image: marketin_2,
       },
       {
+        header: "CRO and Landing Page Optimization",
+        content:
+          "Maximize your site’s potential with our CRO and landing page optimization. Using audience analysis, journey optimization, tracking, AB testing, and expert content creation, we boost conversion rates and user engagement.",
+        image: marketin_4,
+      },
+      {
         header: "Email & SMS",
         content:
           "We help your emails reach more inboxes, increase open and click-through rates, and generate massive revenue.",
         image: marketin_3,
-      },
-      {
-        header: "Amazon",
-        content:
-          "You can't afford to not be on Amazon. We handle everything from your Storefront and Listing Optimization / Creation, PPC Advertising, and Full Service Growth Management.",
-        image: marketin_4,
-      },
-      {
-        header: "CRO",
-        content:
-          "Reach your site's maximum potential with audience analysis, journey optimization, tracking, and AB testing to achieve the highest conversion rate possible.",
-        image: "",
       },
     ],
   };
