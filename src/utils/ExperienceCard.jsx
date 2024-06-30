@@ -8,7 +8,7 @@ function ExperienceCard({ heading, content, image }) {
       </div>
       <div className="experience_description h-full  bg-slate-800 text-gray-50  px-3 py-3">
         <h2 className="text-lg font-bold">{heading}</h2>
-        <p className="text-sm mt-2 leading-5">{content}</p>
+        <p className="text-sm mt-2 leading-5 pb-4">{content}</p>
       </div>
     </div>
   );

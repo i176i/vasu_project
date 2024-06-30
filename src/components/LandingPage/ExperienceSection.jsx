@@ -23,7 +23,7 @@ function ExperienceSection() {
       {
         header: "CRO and Landing Page Optimization",
         content:
-          "Maximize your site’s potential with our CRO and landing page optimization. Using audience analysis, journey optimization, tracking, AB testing, and expert content creation, we boost conversion rates and user engagement.",
+          "Maximize your site's potential with our CRO and landing page optimization. Using audience analysis and  journey optimization through AI, we increase conversion rates and user engagement.",
         image: marketin_4,
       },
       {
