@@ -2,36 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Tailwind Modified Classes */
 
-.leading-snug{
+.leading-snug {
   line-height: 95px;
 }
 
-
-
-
-
 /* Elements */
 
-html{
+html {
   scroll-behavior: smooth;
 }
-body{
+body {
   font-family: "Montserrat", sans-serif;
 }
-button{
+button {
   transition: all 0.3s;
 }
 
 /* Normal Classes */
 
-
-
-.wrapper {
-  background-color: aqua;
-}
 .block-logo {
   position: fixed;
   top: 0;
@@ -79,15 +69,15 @@ canvas {
   min-height: 100vh;
 }
 
-.header  ul {
+.header ul {
   list-style: none;
   padding: 0;
 }
-.header  li {
+/* .header li {
   display: inline;
   margin-right: 20px;
-}
-.banner_text{
+} */
+.banner_text {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   /* font-weight: 300; */
@@ -96,8 +86,7 @@ canvas {
   letter-spacing: -2px;
 }
 
-
-.hide-scrollbar::-webkit-scrollbar{
+.hide-scrollbar::-webkit-scrollbar {
   scrollbar-width: none; /* Firefox */
 }
 /* -------------- Media Queries------------------- */
@@ -108,12 +97,10 @@ canvas {
   }
 }
 @media (max-width: 700px) {
-  .banner_text{
+  .banner_text {
     word-spacing: 10px;
   }
 }
-
-
 
 /* ------------------------------Swiper----------------------- */
 .swiper {
@@ -134,12 +121,38 @@ canvas {
   width: 100%;
   height: 537px;
 }
-.swiper_main_container{
+.swiper_main_container {
   min-height: "400rem";
 }
-.react-player{
+.react-player {
   width: 100%;
   min-height: 537px;
   object-fit: cover;
 }
+@media (max-width: 1000px) {
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 365px;
+  }
+
+  .swiper-slide div {
+    display: block;
+    width: 100%;
+    height: 365px;
+  }
+  .react-player {
+    width: 100%;
+    min-height: 365px;
+    object-fit: cover;
+  }
+}
+
 

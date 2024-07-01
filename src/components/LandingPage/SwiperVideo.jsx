@@ -52,7 +52,7 @@ export default function App() {
 
   return (
     <div className="relative">
-      <div className="swiper_heading text-center text-4xl pb-16">SOME OF OUR WORK</div>
+      <div className="swiper_heading text-center text-2xl md:text-4xl pb-8 md:pb-16">SOME OF OUR WORK</div>
       <Swiper
         ref={swiperRef}
         effect={"coverflow"}
@@ -80,7 +80,7 @@ export default function App() {
         
       >
         {indexes.map((item, index) => (
-          <SwiperSlide id={index} style={{minHeight : "380px"}}>
+          <SwiperSlide id={index} >
             <div className="rounded-2xl overflow-hidden  bg-white object-contain">
               <ReactPlayer
                 className="react-player fixed-bottom"
@@ -106,14 +106,14 @@ export default function App() {
         ))}
       </Swiper>
       <button
-        className="swiper-button-prev absolute z-10 top-1/2 left-12 transform -translate-y-1/2 px-4  bg-blue-800 shadow-[4px_8px_5px_2px_#eeecec22] rounded-full w-16 h-16"
+        className="hidden md:block swiper-button-prev absolute z-10 top-1/2 left-12 transform -translate-y-1/2 px-4  bg-blue-800 shadow-[4px_8px_5px_2px_#eeecec22] rounded-full w-16 h-16"
         onClick={slidePrev}
       >
         <img src={left_arrow} alt="" className="invert" />
       </button>
 
       <button
-        className="swiper-button-prev absolute z-10 top-1/2 right-12 transform -translate-y-1/2 bg-blue-800 px-4 shadow-[4px_8px_5px_2px_#eeecec22] rounded-full w-16 h-16"
+        className="hidden md:block swiper-button-prev absolute z-10 top-1/2 right-12 transform -translate-y-1/2 bg-blue-800 px-4 shadow-[4px_8px_5px_2px_#eeecec22] rounded-full w-16 h-16"
         onClick={slideNext}
       >
         <img src={right_arrow} alt="" className="invert" />
