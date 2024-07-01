@@ -7,6 +7,7 @@ import ExperienceSection from "../components/LandingPage/ExperienceSection";
 import InfoGraphicsSection from "../components/LandingPage/InfoGraphicsSection";
 import CalendlySection from "../components/LandingPage/CalendlySection";
 import SwiperVideo from "../components/LandingPage/SwiperVideo";
+import Footer from "../components/LandingPage/Footer";
 
 function MainLanding() {
   return (
@@ -19,6 +20,7 @@ function MainLanding() {
         <InfoGraphicsSection />
         <SwiperVideo />
         <CalendlySection />
+        <Footer/>
     </div>
   );
 }

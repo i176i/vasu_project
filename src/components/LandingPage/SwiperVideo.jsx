@@ -52,6 +52,7 @@ export default function App() {
 
   return (
     <div className="relative">
+      <div className="swiper_heading text-center text-4xl pb-16">SOME OF OUR WORK</div>
       <Swiper
         ref={swiperRef}
         effect={"coverflow"}
