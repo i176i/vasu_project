@@ -24,7 +24,7 @@ function ScrollableImageBanners() {
     banner_img03
   ];
   return (
-    <div className="scrollable_banner_wrapper w-full px-20">
+    <div className="scrollable_banner_wrapper w-full px-2 lg:px-20">
       <div className="flex overflow-x-scroll hide-scrollbar box-content py-10 ">
         {list.map((item, index) => (
           <Card item={item} id={index} />

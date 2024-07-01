@@ -100,7 +100,18 @@ canvas {
 .hide-scrollbar::-webkit-scrollbar{
   scrollbar-width: none; /* Firefox */
 }
+/* -------------- Media Queries------------------- */
 
+@media (max-width: 1200px) {
+  .mainLandingWrapper {
+    padding: 0;
+  }
+}
+@media (max-width: 700px) {
+  .banner_text{
+    word-spacing: 10px;
+  }
+}
 
 
 
