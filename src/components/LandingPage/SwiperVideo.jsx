@@ -97,6 +97,7 @@ export default function App() {
                         objectFit: "contain", 
                         outerHeight : "600px"
                       },
+                      controlsList: "nofullscreen",
                     },
                   },
                 }}
