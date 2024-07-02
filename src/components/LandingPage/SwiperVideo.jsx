@@ -6,6 +6,7 @@ import sample_video_2 from "../../assets/videos/sample_video_2.mp4";
 import sample_video_3 from "../../assets/videos/sample_video_3.mp4";
 import left_arrow from "../../assets/images/left-arrow.png";
 import right_arrow from "../../assets/images/right-arrow.png";
+import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 
 // Import Swiper styles
 import "swiper/css";
@@ -19,20 +20,48 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 export default function App() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMuted, setIsMuted] = useState(true);
 
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
   };
   const indexes = [
-    { index: 0, url: "https://cdn.shopify.com/videos/c/o/v/ff9893a9e10a4d2f9fd08d68f08435aa.mp4" },
-    { index: 1, url: "https://cdn.shopify.com/videos/c/o/v/3bf3b3b7d2b64670bcdba59ed6286e4c.mp4" },
-    { index: 2, url: "https://cdn.shopify.com/videos/c/o/v/c541005a34ad44f8bfe385d2099a9cc2.mp4" },
-    { index: 3, url: "https://cdn.shopify.com/videos/c/o/v/027cf56ebf384bcebff6873f28be8916.mp4" },
-    { index: 4, url: "https://cdn.shopify.com/videos/c/o/v/3bf3b3b7d2b64670bcdba59ed6286e4c.mp4" },
-    { index: 5, url: "https://cdn.shopify.com/videos/c/o/v/da8fe135be79439c81f16ca54c70edde.mp4" },
-    { index: 6, url: "https://cdn.shopify.com/videos/c/o/v/17bd689ecc9842deaaa174ee1c613783.mp4" },
-    { index: 7, url: "https://cdn.shopify.com/videos/c/o/v/027cf56ebf384bcebff6873f28be8916.mp4" },
-    { index: 8, url: "https://cdn.shopify.com/videos/c/o/v/3bf3b3b7d2b64670bcdba59ed6286e4c.mp4" },
+    {
+      index: 0,
+      url: "https://cdn.shopify.com/videos/c/o/v/ff9893a9e10a4d2f9fd08d68f08435aa.mp4",
+    },
+    {
+      index: 1,
+      url: "https://cdn.shopify.com/videos/c/o/v/3bf3b3b7d2b64670bcdba59ed6286e4c.mp4",
+    },
+    {
+      index: 2,
+      url: "https://cdn.shopify.com/videos/c/o/v/c541005a34ad44f8bfe385d2099a9cc2.mp4",
+    },
+    {
+      index: 3,
+      url: "https://cdn.shopify.com/videos/c/o/v/027cf56ebf384bcebff6873f28be8916.mp4",
+    },
+    {
+      index: 4,
+      url: "https://cdn.shopify.com/videos/c/o/v/3bf3b3b7d2b64670bcdba59ed6286e4c.mp4",
+    },
+    {
+      index: 5,
+      url: "https://cdn.shopify.com/videos/c/o/v/da8fe135be79439c81f16ca54c70edde.mp4",
+    },
+    {
+      index: 6,
+      url: "https://cdn.shopify.com/videos/c/o/v/17bd689ecc9842deaaa174ee1c613783.mp4",
+    },
+    {
+      index: 7,
+      url: "https://cdn.shopify.com/videos/c/o/v/027cf56ebf384bcebff6873f28be8916.mp4",
+    },
+    {
+      index: 8,
+      url: "https://cdn.shopify.com/videos/c/o/v/3bf3b3b7d2b64670bcdba59ed6286e4c.mp4",
+    },
   ];
   const middleVideo = Math.floor(indexes.length / 2);
 
@@ -50,9 +79,15 @@ export default function App() {
 
   const swiperRef = React.useRef(null);
 
+  const handlePlayerClick = () => {
+    setIsMuted((prevMute) => !prevMute);
+  };
+
   return (
     <div className="relative">
-      <div className="swiper_heading text-center text-2xl md:text-4xl pb-8 md:pb-16">SOME OF OUR WORK</div>
+      <div className="swiper_heading text-center text-2xl md:text-4xl pb-8 md:pb-16">
+        SOME OF OUR WORK
+      </div>
       <Swiper
         ref={swiperRef}
         effect={"coverflow"}
@@ -77,31 +112,48 @@ export default function App() {
           console.log(swiper);
           setActiveIndex(swiper.activeIndex);
         }}
-        
       >
         {indexes.map((item, index) => (
-          <SwiperSlide id={index} >
-            <div className="rounded-2xl overflow-hidden  bg-white object-contain">
+          <SwiperSlide id={index}>
+            <div
+              className="rounded-2xl overflow-hidden  bg-white object-contain"
+              onClick={handlePlayerClick}
+            >
               <ReactPlayer
                 className="react-player fixed-bottom"
                 url={item.url}
                 width="100%"
-                controls={activeIndex == item.index}
+                // controls={activeIndex == item.index}
+                controls={false}
                 playing={activeIndex == item.index}
                 style={{ objectFit: "contain", borderRadius: "10px" }}
                 loop={true}
+                muted={isMuted}
+                height="100%"
                 config={{
                   file: {
                     attributes: {
+                      playsInline: true,
                       style: {
-                        objectFit: "contain", 
-                        outerHeight : "600px"
+                        objectFit: "contain",
+                        outerHeight: "600px",
                       },
                       controlsList: "nofullscreen",
                     },
                   },
                 }}
               />
+              <div className="absolute top-2 left-2 max-h-14 max-w-14 rounded-full ">
+                {activeIndex == item.index ? (
+                  isMuted ? (
+                    <FaVolumeMute size={32} color="white"/>
+                  ) : (
+                    <FaVolumeUp size={32} color="white"/>
+                  )
+                ) : (
+                  <></>
+                )}
+              </div>
             </div>
           </SwiperSlide>
         ))}

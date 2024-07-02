@@ -125,9 +125,9 @@ canvas {
   min-height: "400rem";
 }
 .react-player {
-  width: 100%;
-  min-height: 537px;
-  object-fit: cover;
+  width: 100% !important;
+  min-height: 737px !important;
+  /* object-fit: cover; */
 }
 @media (max-width: 1000px) {
   .swiper {
