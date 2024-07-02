@@ -85,7 +85,7 @@ export default function App() {
 
   return (
     <div className="relative">
-      <div className="swiper_heading text-center text-2xl md:text-4xl pb-8 md:pb-16">
+      <div className="swiper_heading text-center text-2xl font-semibold md:font-normal md:text-4xl pb-8 md:pb-16">
         SOME OF OUR WORK
       </div>
       <Swiper

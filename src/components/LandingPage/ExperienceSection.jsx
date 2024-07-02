@@ -69,7 +69,7 @@ function ExperienceSection() {
   // );
 
   return (
-    <div id="about" className="experience mx-5 md:mx-10 mt-8 md:mt-24">
+    <div id="whatWeDo" className="experience mx-5 md:mx-10 mt-8 md:mt-24">
       <div className="experience_header flex flex-col sm:flex-row justify-between mx-5 md:mx-20 mb-10">
         <h1 className="text-xl md:text-3xl mb-5 md:mb-0 m-auto sm:m-0">What We Do</h1>
         <button className="bg-white hover:bg-slate-900 text-black hover:text-white font-bold py-2 rounded-full px-4 border border-slate-900">
